@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2F7D6D">
+  <meta name="description" content="Prototipe JEDA: Jejaring Deteksi Dini dan Pendampingan Jiwa Mahasiswa">
+  <title>JEDA | Prototipe Aplikasi</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%232F7D6D'/><circle cx='50' cy='50' r='24' fill='%23EAF4F0'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="stage">
+    <!-- Panel demo (untuk presentasi dan tangkapan layar) -->
+    <aside class="demo-panel" id="demoPanel" aria-label="Panel demo prototipe">
+      <div class="demo-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <h1>JEDA</h1>
+          <p>Jejaring Deteksi Dini dan Pendampingan Jiwa Mahasiswa</p>
+        </div>
+      </div>
+      <p class="demo-note">Prototipe untuk Lomba Esai NSCC 2026. Semua data di sini adalah simulasi dan tidak disimpan.</p>
+
+      <div class="demo-group">
+        <h2>Lihat sebagai</h2>
+        <div class="seg" role="tablist" id="roleSwitch">
+          <button data-role="mahasiswa" class="is-on" role="tab">Mahasiswa</button>
+          <button data-role="konselor" role="tab">Konselor</button>
+          <button data-role="pimpinan" role="tab">Pimpinan</button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h2>Lompat ke layar</h2>
+        <div class="jump-list" id="jumpList">
+          <button data-jump="consent">Persetujuan data</button>
+          <button data-jump="home">Beranda</button>
+          <button data-jump="cek">Cek Rutin</button>
+          <button data-jump="mandiri">Ruang Mandiri</button>
+          <button data-jump="cerita">Teman Cerita</button>
+          <button data-jump="jadwal">Jadwal konseling</button>
+          <button data-jump="progres">Grafik perkembangan</button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h2>Simulasikan hasil Cek Rutin</h2>
+        <div class="level-demo" id="levelDemo">
+          <button data-sim="hijau" class="lv lv-hijau">Hijau</button>
+          <button data-sim="kuning" class="lv lv-kuning">Kuning</button>
+          <button data-sim="oranye" class="lv lv-oranye">Oranye</button>
+          <button data-sim="merah" class="lv lv-merah">Merah</button>
+        </div>
+      </div>
+
+      <button class="reset" id="resetDemo">Ulangi dari awal</button>
+    </aside>
+
+    <button class="demo-toggle" id="demoToggle" aria-controls="demoPanel" aria-expanded="false">Panel demo</button>
+
+    <!-- Bingkai ponsel -->
+    <main class="phone" aria-live="polite">
+      <div class="phone-screen" id="app"></div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
